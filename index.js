@@ -1,21 +1,8 @@
 import React from 'react'
-var ReactDOM = require('react-dom');
-
-class CommentBox extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className='commentBox'>
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
-}
+import ReactDOM from 'react-dom'
+import CommentBox from './components/CommentBox'
 
 ReactDOM.render(
-  <CommentBox />,
+  <CommentBox url="comments.json" pollInterval={2000} />,
   document.getElementById('container')
 );
